@@ -49,12 +49,18 @@ body, html {
 }
 /* QC GIF */
 .QC_GIF {
-
+  float: left;
   max-width: 100%;
   min-height: 100%
 }
 .PPhilip_dashboard{
   max-width: 80%;
+}
+.WA_GIF {
+  float: right;
+  max-width: 50%;
+  min-height: 100%;
+  
 }
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
@@ -69,13 +75,19 @@ body, html {
 
 /*  Turn off QC_GIF available  */ 
 @media only screen and (max-device-width: 400px){
-  .QC_GIF{
+  .QC_GIF,.WA_GIF{
     display:none;
   }
 }
 @media only screen and (max-device-width: 650px){
   .PPhilip_dashboard{
     display: none;
+  }
+}
+@media only screen and (max-device-width: 500px){
+  .WA_GIF{
+    flex-direction:row;
+    /* margin-left: 15%; */
   }
 }
 </style>
@@ -155,7 +167,9 @@ body, html {
         <!-- <source src="QuickCaptureGIF.gif" type="/gif"> -->
         <img src="QuickCaptureGIF.gif" alt="Gif showing data entered through Quick CApture">
       </div>
-      
+      <div class="WA_GIF">
+        <img src="WorkForceAppGIF.gif" alt="Gif showing data entered through Quick CApture">
+      </div>
       <div class="PPhilip_dashboard">
         <p> The image of the dashboard.</p>
         <img src="pphilip_dashbard.png" alt="iMAGE showing DASHBOARD">
