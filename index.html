@@ -47,15 +47,32 @@ body, html {
   background-image: url("img/black.jpg");
   min-height: 400px;
 }
+.one {
+  float:none;
+}
+.two{
+  float: left;
+}
 /* QC GIF */
 .QC_GIF {
   max-width: 100%;
-  min-height: 100%
+  min-height: 100%;
+  float: left;
+  
+}
+.WA_GIF {
+  float: right;
+  max-width: 100%;
 }
 .PPhilip_dashboard{
   max-width: 80%;
 }
-
+.clappia,.kobo{
+  float:left;
+}
+.pdash, .workweb{
+  float:left;
+}
 .c_appcreation, .c_datacollection, .c_analytics, .k_appcreation, .k_datacollection, .k_analytics, .k_notebook {
   transform: scale(0.7);
   float: left;
@@ -73,17 +90,19 @@ body, html {
 }
 
 /*  Turn off QC_GIF available  */ 
-@media only screen and (max-device-width: 400px){
-  .QC_GIF,.WA_GIF{
+@media only screen and (max-device-width:670px){
+  .QC_GIF,.WA_GIF,.pdash{
     display:none;
+    
   }
 }
   
-@media only screen and (max-device-width: 650px){
+ /*@media only screen and (max-device-width: 650px){
   .PPhilip_dashboard{
     display: none;
   }
 }
+*/
   
 @media only screen and (max-device-width: 650px){
   .c_appcreation, .c_datacollection, .c_analytics, .k_appcreation, .k_datacollection, .k_analytics, .k_notebook{
@@ -156,23 +175,59 @@ body, html {
   <p class="w3-center"><em>Some of the technology we looked at:</em></p>
   <h4>Creating an integrated Solution</h4>
   <p><em>Tried to develop a solution with Survey123, Quick Capture and Workforce to display on a live dashboard</em></p>
-  <p>This Solution did not work as <br> 
-      Once the survey is completed and survey points are displayed in the dispatcher map, it could not automatically assign the work to someone working.<br>
-      As the density of survey points increased, it was difficult to understand which works are already assigned (data accuracy can be affected).<br>
-      The assignment type was manually entered, data validation cannot be assured.  </p>
+      <!-- <source src="QuickCaptureGIF.gif" type="/gif"> -->
       <div class="QC_GIF">
-        <!-- <source src="QuickCaptureGIF.gif" type="/gif"> -->
         <img src="img/QuickCaptureGIF.gif" alt="Gif showing data entered through Quick CApture">
       </div>
       <div class="WA_GIF">
-        <img src="WorkForceAppGIF.gif" alt="Gif showing data entered through Quick CApture">
+        <img src="img/WorkForceAppGIF.gif" alt="Gif showing data entered through Quick CApture">
       </div>
-      <div class="PPhilip_dashboard">
+      <div class="one">
+      <p> Here the data is GIS data collection app simplifies and accelerates field data capture—eliminating manual processes and saving time.</p>
+      <p>The question that is being asked is getting stored in an Survey 123, hosted feature layer which is being displayed in the workforce dispacher map. 
+        This assures that the location validity is maintained based on the capture and makes it easier to assign the work.
+      </p>
+    </div>
+      <!-- Source:https://www.esri.com/en-us/arcgis/products/arcgis-quickcapture/overview -->
+      
+      <!-- <div class="PPhilip_dashboard">
         <p> The image of the dashboard.</p>
         <img src="img/pphilip_dashbard.png" alt="iMAGE showing DASHBOARD">
+      </div> -->
+      <div class ="two">
+      <p>This Solution did not work as: <br>
+        <ul> 
+        <li>Once the survey is completed and survey points are displayed in the dispatcher map, it could not automatically assign the work to someone working.</li>
+        <li>As the density of survey points increased, it was difficult to understand which works are already assigned (data accuracy can be affected).</li>
+        <li>The assignment type was manually entered, data validation cannot be assured.</li>
+      </ul>
+      <p>Takeaways:</p>
+      <ul> 
+        <li>Minimum input from the user end (data is more accurate) Quick capture will record the issue and send to the workforce dispatcher directly. </li> 
+        <li>The workers cannot see the new survey points until it is getting assigned. </li>
+        <li>Once assigned the task, the worker then submits the survey(workforce linked to survey)</li>
+        <li>Here the worker cannot change the time of survey and assigned time, assigned work or location or assignment type.</li> 
+        <li>The dispatcher map is displayed on the dashboard that shows the survey point, workers, and assignments as different layers.</li> 
+        <li>As the work gets updated the statistics will update itself  </li>
+      </ul>
+    </div>
+    <div class="workweb">
+      <p>Here is the link to the workforce dispatcher map:<a href="https://fleming.maps.arcgis.com/apps/workforce/projects/c5b6b3fc738e4f8da3367376a1b36e71/dispatch/assignments" target="_blank">The workforce dispatcher map</a></p>
+      <div class="ppwork">
+      <img src="img/workforceScreen.gif" alt="Gif showing the dashoard created">
       </div>
+    </div>
+    <div class="pdash">
+      <p>Here is the link to the dashboard:<a href="https://fleming.maps.arcgis.com/apps/dashboards/127c1ae15b1d4a718bc06564d519cc5d" target="_blank">The dashboard created using ArcGIS</a></p>
+      <div class="ppdash">
+      <img src="img/dashboard_pp.gif" alt="Gif showing the dashoard created">
+      </div>
+    </div>
+
+
 
   <!-- Hannah -->
+  <div class="clappia">
   <h4>Clappia</h4>
   <p>Link to created survey: <a href="https://geom99.clappia.com/app/INC163980">https://geom99.clappia.com/app/INC163980</a></p>
   <p>Clappia is a no-code platform that allows users to build applications with extensive customization capabilities. Designing apps is amazingly simple with a drag and drop interface, and all stored within a centralized workspace. Clappia integrates with various data sources and offers features like workflow automation, form building, and data visualization. Its user-friendly design empowers businesses to streamline processes and improve productivity without relying on technical expertise. Here is the link to the website: <a href="https://www.clappia.com/" target="_blank">https://www.clappia.com/</a>
@@ -196,7 +251,8 @@ It has four tiers of payment. The plan we used to test out the site was the free
     <li>Allows full customization of applications with workflows, reports, dashboards, and integrations</li>
     <li>Hard to integrate with other platforms, a lot of limitations with the free pay tier, not built with geospatial data collection and integration with GIS systems in mind</li>
   </ul>
-
+</div>
+<div class="kobo">
   <h4>KoboToolbox</h4>
   <p>Link to created survey: <a href="https://ee.kobotoolbox.org/x/aayKcSSp">Incident Reporting(kobotoolbox.org)</a></p>
   <p>KoboToolbox is an open-source collection of tools for field data collection. It allows users to create surveys, questionnaires, and data collection forms that can be deployed via web browsers or mobile devices. The platform offers features such as offline data collection, data validation, and data visualization. Here is the link to the website: <a href="https://www.kobotoolbox.org/" target="_blank">https://www.kobotoolbox.org/</a>
@@ -224,6 +280,7 @@ It offers two versions of pricing tiers targeted towards nonprofit organizations
     <li>Offers a lot of customization and flexibility by being able to create highly tailored data collection forms and workflows using a variety of question types, logic, and branching</li>
     <li>Other than manually downloading the data, really hard to automate integration with GIS platforms (specifically ArcGIS)</li>
   </ul>
+</div>
 </div>
   
 
