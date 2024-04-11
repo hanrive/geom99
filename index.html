@@ -60,6 +60,7 @@ body, html {
   float: left;
   
 }
+
 .WA_GIF {
   float: right;
   max-width: 100%;
@@ -70,7 +71,7 @@ body, html {
 .clappia,.kobo{
   float:left;
 }
-.pdash, .workweb{
+.pdash, .workweb,{
   float:left;
 }
 .c_appcreation, .c_datacollection, .c_analytics, .k_appcreation, .k_datacollection, .k_analytics, .k_notebook {
@@ -91,7 +92,7 @@ body, html {
 
 /*  Turn off QC_GIF available  */ 
 @media only screen and (max-device-width:670px){
-  .QC_GIF,.WA_GIF,.pdash{
+  .QC_GIF,.WA_GIF,.pdash,.ppwork{
     display:none;
     
   }
@@ -180,25 +181,23 @@ body, html {
   <h4>Creating an integrated Solution</h4>
   <p><em>Tried to develop a solution with Survey123, Quick Capture and Workforce to display on a live dashboard</em></p>
       <!-- <source src="QuickCaptureGIF.gif" type="/gif"> -->
-      <div class="QC_GIF">
-        <img src="img/QuickCaptureGIF.gif" alt="Gif showing data entered through Quick CApture">
-      </div>
-      <div class="WA_GIF">
-        <img src="img/WorkForceAppGIF.gif" alt="Gif showing data entered through Quick CApture">
-      </div>
-      <div class="one">
-      <p> Here the data is GIS data collection app simplifies and accelerates field data capture—eliminating manual processes and saving time.</p>
-      <p>The question that is being asked is getting stored in an Survey 123, hosted feature layer which is being displayed in the workforce dispacher map. 
-        This assures that the location validity is maintained based on the capture and makes it easier to assign the work.
-      </p>
-    </div>
+      <div class="box"></div>
+        <div class="QC_GIF">
+          <img src="img/QuickCaptureGIF.gif" alt="Gif showing data entered through Quick CApture">
+        </div>
+        <div class="WA_GIF">
+          <img src="img/WorkForceAppGIF.gif" alt="Gif showing data entered through Quick CApture">
+        </div>
+        <div class="one">
+        <p> Here the data is GIS data collection app simplifies and accelerates field data capture—eliminating manual processes and saving time.</p>
+        <p>The question that is being asked is getting stored in an Survey 123, hosted feature layer which is being displayed in the workforce dispacher map. 
+            This assures that the location validity is maintained based on the capture and makes it easier to assign the work.
+        </p>
+        </div>
+      
       <!-- Source:https://www.esri.com/en-us/arcgis/products/arcgis-quickcapture/overview -->
       
-      <!-- <div class="PPhilip_dashboard">
-        <p> The image of the dashboard.</p>
-        <img src="img/pphilip_dashbard.png" alt="iMAGE showing DASHBOARD">
-      </div> -->
-      <div class ="two">
+           <div class ="two">
       <p>This Solution did not work as: <br>
         <ul> 
         <li>Once the survey is completed and survey points are displayed in the dispatcher map, it could not automatically assign the work to someone working.</li>
@@ -215,6 +214,7 @@ body, html {
         <li>As the work gets updated the statistics will update itself  </li>
       </ul>
     </div>
+  
     <div class="workweb">
       <p>Here is the link to the workforce dispatcher map:<a href="https://fleming.maps.arcgis.com/apps/workforce/projects/c5b6b3fc738e4f8da3367376a1b36e71/dispatch/assignments" 
         target="_blank">The workforce dispatcher map</a></p>
@@ -288,6 +288,8 @@ The plan we used to test out the site was the free community plan which allows u
     <div class="k_appcreation">
         <img src="img/Clappia_KoboToolbox/kobotoolbox_appcreation.gif" alt="Behind the scenes of creating the survey on KoboToolbox">
     </div>
+
+
   <p>When creating a form you can build from scratch, use a template (of previously built forms you’ve created and added to your own personal library), 
     upload an XLSForm, or important an XLSForm via URL. This form for incident reporting was built from scratch and 
     followed the same format with the same questions as the Clappia survey and the one made in Survey123.</p>
@@ -326,6 +328,7 @@ The plan we used to test out the site was the free community plan which allows u
     </ul>
   </div>
   </div>
+
   
 
 <!-- Third Parallax Image with Solution Text -->
