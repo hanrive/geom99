@@ -141,10 +141,7 @@ body, html {
 <div class="w3-content w3-container w3-padding-64" id="process">
   <h3 class="w3-center">PROCESS</h3>
   <p class="w3-center"><em>Some of the technology we looked at:</em></p>
-  <ul>
-  <li>Fulcrum</li>
-  <li>idk</li>
-  <li><b>Creating an integrated Solution</b></li>
+  <h4>Creating an integrated Solution</h4>
   <p><em>Tried to develop a solution with Survey123, Quick Capture and Workforce to display on a live dashboard</em></p>
   <p>This Solution did not work as <br> 
       Once the survey is completed and survey points are displayed in the dispatcher map, it could not automatically assign the work to someone working.<br>
@@ -159,7 +156,45 @@ body, html {
         <p> The image of the dashboard.</p>
         <img src="img/pphilip_dashbard.png" alt="iMAGE showing DASHBOARD">
       </div>
-</ul>  
+
+  <!-- Hannah -->
+  <h4>Clappia</h4>
+  <p>Link to created survey: <a href="https://geom99.clappia.com/app/INC163980">https://geom99.clappia.com/app/INC163980</a></p>
+  <p>Clappia is a no-code platform that allows users to build applications with extensive customization capabilities. Designing apps is amazingly simple with a drag and drop interface, and all stored within a centralized workspace. Clappia integrates with various data sources and offers features like workflow automation, form building, and data visualization. Its user-friendly design empowers businesses to streamline processes and improve productivity without relying on technical expertise. Here is the link to the website: <a href="https://www.clappia.com/">https://www.clappia.com/</a>
+It has four tiers of payment. The plan we used to test out the site was the free plan which offers: up to 100 users, 400 submissions per month, 400 workflow step executions per month, unlimited apps, 1 PDF configuration, 1 Google Sheet Integration, 20 free messages per month over both WhatsApp and SMS, and support over email and chat.
+</p>
+  <img src="img/Clappia_KoboToolbox/clappia_appcreation.jpeg" alt="Behind the scenes of creating the survey on Clappia">
+  <p>You can use an already made template with themes of daily attendance tracker, restaurant order taking solution, inventory management, IT ticketing solution, and much more. This app for incident reporting was made from scratch and followed the same format with the same questions as the survey made in Survey123.</p>
+  <img src="img/Clappia_KoboToolbox/clappia_datacollection.gif" alt="Gif of filling out the survey">
+  <p>This gif shows the process of data collection on the survey on a phone; however, users can also use a computer to submit data. It generates a unique ticket per submission automatically, collects spatial data using Google Maps, collects the time and data, and more. In the workspace dashboard (the home page of the app) there is a tab for submissions (under ‘Submissions’) where you can see the all the responses made, as well as the answers/owner of submission/etc., as well as a tab to see the analytics (under ‘Analytics’) where you can display the location of all submissions as well as capabilities to display answers with a chart (I couldn’t figure out how to do that exactly though).</p>
+  <img src="img/Clappia_KoboToolbox/clappia_analytics.jpeg" alt="Screenshot of the map that displays where the survey has been filled out">
+  <p>There is also the option to have the data automatically send the results to a Google Sheets/Drive or integrate a database. When looking at database integration, it gives the options for database type of MySql, PostgreSql, and AzureSql. We tried connecting the Clappia survey to ArcGIS Online with each type of database however the following problems were encountered: MySql only allowed the option of downloading and manually publishing the data to Online through ArcGIS Pro or the implementation of ArcGIS Server or a full ArcGIS Enterprise deployment to serve the data as a REST service. PostgreSql and AzureSql both suggested if we were to have ArcGIS Enterprise (which we do not) we could register a PostgreSQL database with ArcGIS Server and then publish the map/feature to ArcGIS Server and then to ArcGIS Online. Overall, no automated method that allowed pushing to ArcGIS without manual intervention or a more expensive license.</p>
+  <p>Takeaways:</p>
+  <ul>
+    <li>Allowed both organizations and the public to submit data (with the use of a link)</li>
+    <li>Allows full customization of applications with workflows, reports, dashboards, and integrations</li>
+    <li>Hard to integrate with other platforms, a lot of limitations with the free pay tier, not built with geospatial data collection and integration with GIS systems in mind</li>
+  </ul>
+
+  <h4>KoboToolbox</h4>
+  <p>Link to created survey: <a href="https://ee.kobotoolbox.org/x/aayKcSSp">Incident Reporting(kobotoolbox.org)</a></p>
+  <p>KoboToolbox is an open-source collection of tools for field data collection. It allows users to create surveys, questionnaires, and data collection forms that can be deployed via web browsers or mobile devices. The platform offers features such as offline data collection, data validation, and data visualization. Here is the link to the website: <a href="https://www.kobotoolbox.org/">https://www.kobotoolbox.org/</a>
+It offers two versions of pricing tiers targeted towards nonprofit organizations and ‘other’ like private/for-profit organizations and personal use. The plan we used to test out the site was the free community plan which allows unlimited projects/forms and data collectors/collaborators, 5000 survey submissions per month, 1GB file storage, and online and offline collection.</p>
+  <img src="img/Clappia_KoboToolbox/kobotoolbox_appcreation.gif" alt="Behind the scenes of creating the survey on KoboToolbox">
+  <p>When creating a form you can build from scratch, use a template (of previously built forms you’ve created and added to your own personal library), upload an XLSForm, or important an XLSForm via URL. This form for incident reporting was built from scratch and followed the same format with the same questions as the Clappia survey and the one made in Survey123.</p>
+  <img src="img/Clappia_KoboToolbox/kobotoolbox_datacollection.gif" alt="Gif of filling out the survey">
+  <p>This video shows the process of data collection on the survey from a web browser. There is an app called ‘KoboCollect’ that allows for survey collection as well however when we attempted to it just gave a server error. The survey automatically collects a unique ID, date and time of collection, spatial data using OpenStreetMaps, and more. In the survey details there is a tab for ‘Data’ and under that you can see a table (under ‘Table’) that displays all the submissions, under ‘Reports’ there is an automated report generated using raw data in the form of bar graphs, under ‘Map’ you can see on a map (hosted by OpenStreetMap) the location of all survey submissions, and under a few other tabs the option to view all pictures submitted and the option to download the data to XLS.</p>
+  <img src="img/Clappia_KoboToolbox/kobotoolbox_analytics.png" alt="Screenshot of the map that displays where the survey has been filled out">
+  <p>Other than downloading the data to XLS, CSV, GeoJSON, KML, and a few other file formats – there are no easily available options for integrating the Kobo form with other apps. However, on a forum post on the KoboToolbox community page (viewed here: <a href="https://community.kobotoolbox.org/t/kobo-form-to-arcgis-online-feature-service/11716/8">Community Post</a>) which gives a brief description of the steps to integrate the survey to an ArcGIS Online feature layer. Setup a notebook in Databricks, supported by the same Google Cloud project we created for a previous web lab. Running a script that retrieves the data from KoboToolbox as a CSV and using the ‘overwrite()’ method from the ArcGIS Online Python API to update the feature layer with the data from the CSV file. This process should automate the integration of data collected through the Kobo survey into an ArcGIS Online feature layer – however after connecting to Google Cloud and creating the notebook, we got scared and backed out.</p>
+  <img src="img/Clappia_KoboToolbox/notebook.jpg" alt="Screenshot of the notebook created on Databricks">
+  <p>Takeaways:</p>
+  <ul>
+    <li>Allowed both organizations and the public to submit data (with the use of a link)</li>
+    <li>KoboToolbox is an open-source software meaning it can be used and modified by anyone</li>
+    <li>Allows for both online and offline data collection</li>
+    <li>Offers a lot of customization and flexibility by being able to create highly tailored data collection forms and workflows using a variety of question types, logic, and branching</li>
+    <li>Other than manually downloading the data, really hard to automate integration with GIS platforms (specifically ArcGIS)</li>
+  </ul>
 </div>
   
 
